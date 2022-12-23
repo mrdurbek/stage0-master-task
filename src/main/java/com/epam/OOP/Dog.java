@@ -17,8 +17,8 @@ public class Dog extends Animal{
 	}
 
 	@Override
-	public void getDescription() {
-		super.getDescription();
+	public String getDescription() {
+		return super.getDescription();
 	}
 	
 	

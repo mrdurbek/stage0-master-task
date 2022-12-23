@@ -14,7 +14,7 @@ public class Animal {
 		this.hasFur = hasFur;
 	}
 	
-	public void getDescription() {
+	public String getDescription() {
 		
 		String description = "This animal is mostly "+ this.color+". It has "+this.numberOfPaws;
 		if(this.hasFur && this.numberOfPaws>1) {
@@ -29,6 +29,7 @@ public class Animal {
 		else description += " paws and no fur.";
 		
 		System.out.print(description);
+		return description;
 	}
 
 	public String getColor() {
