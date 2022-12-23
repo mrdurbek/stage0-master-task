@@ -28,7 +28,7 @@ public class Main {
 		multiplicationTable.printTable(5);
 		
 		ArrayTasks arrayTasks = new ArrayTasks();
-		int[][] arr = arrayTasks.sortRaggedArray(new int[][] {{3 , 6 , 4},{9 , 8  , 7}});
+		int[][] arr = arrayTasks.sortRaggedArray(new int[][] {{3 , 6 , 4},{ 8 , 7}});
 	
 		for(int i = 0; i<arr.length; i++) {
 			for(int j = 0; j<arr[i].length; j++) {

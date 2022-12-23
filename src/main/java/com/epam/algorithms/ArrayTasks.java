@@ -119,19 +119,20 @@ public class ArrayTasks {
      * arr = [[3, 1, 2,], [3,2]] -> [[2, 3], [1, 2, 3]] arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-    	int i, j, temp;
-    	int n=arr.length;
-    	int m=arr[0].length;
-    	for (i = 0; i < n * m - 1; ++i) {
-    	for (j = 0; j < n * m - 1 - i; ++j) {
-    	if (arr[j / m][j % m] > arr[(j + 1) / m][(j + 1) % m]) {
-    	temp = arr[(j + 1) / m][(j + 1) % m];
-    	arr[(j + 1) / m][(j + 1) % m] = arr[j / m][j % m];
-    	arr[j / m][j % m] = temp;
-    		}
-    		}
-    	}
+    		for (int i = 0; i < arr.length; i++)
+                for (int j = i+1; j < arr[i].length ; j++)
+                    if (arr[i][j-1] > arr[i][j]) {
+                        int temp = arr[i][j-1];
+                        arr[i][j-1] = arr[i][j];
+                        arr[i][j] = temp;
+                    }
+    	
         return arr;
     }
-
+    class BubbleSort {
+        void bubbleSort(int arr[])
+        {
+            
+        }
+    }
 }
